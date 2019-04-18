@@ -7,6 +7,8 @@ const db = require('./utils/database'),
     sequelize = db.sequelize;
 const app = express();
 
+const routes = require('./routes/routes');
+
 
 app.engine(
     'hbs',
@@ -22,16 +24,7 @@ app.set('views', 'views');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// put in our own sessionStore (new instance of sessionStore) instead of using expresse's
-app.use(session({
-  store: sessionStore
-  , secret: 'secret'
-  , resave: false
-  , saveUninitialized: false
-  , key: 'connect.sid'
-}));
-
-
+app.use('/', routes);
 
 
 sequelize.sync({force: true})
