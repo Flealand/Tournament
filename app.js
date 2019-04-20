@@ -29,6 +29,7 @@ app.use('/', routes);
 
 sequelize.sync({force: true})
 .then(result => {
+  console.log(result);
   app.listen(3000);
 })
 .catch(err => {

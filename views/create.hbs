@@ -1,0 +1,54 @@
+<main>
+
+
+  <div class="row" id="buttons">
+    <div class="col-md-6">
+      <button id="addplayer">
+        +
+      </button>
+      <button id="removeplayer">
+        -
+      </button>
+    </div>
+  </div>
+
+
+  <form class="product-form" action="create" method="POST">
+  <div class="col-md-12" id="players">
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Teilnehmer:</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <label>Turniername</label>
+        <input type="text" name="tournamentname" id="tournamentname">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <label>Anzahl Runden:</label>
+        <input type="text" name="roundcount" id="roundcount">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <label>Spieler 1</label>
+        <input type="text" name="player1" id="player1">
+      </div>
+    </div>
+  </div>
+
+    <button type="submit">Starten</button>
+  </form>
+
+
+
+</main>
+
+<script src="/src/create.js"></script>
